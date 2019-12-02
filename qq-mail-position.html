@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <title>QQ-Mail-Position</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .top {
+        width: 100%;
+        height: 100px;
+        margin: 0;
+        background-color: red;
+        position: absolute;
+      }
+      .left {
+        width: 20%;
+        height: calc(100% - 100px);
+        background-color: blue;
+        position: absolute;
+        top: 100px;
+      }
+      .right {
+        width: 80%;
+        height: calc(100% - 100px);
+        background-color: yellow;
+        position: absolute;
+        top: 100px;
+        left: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">QQ-Mail-Position</div>
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>
