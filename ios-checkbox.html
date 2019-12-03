@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    input{
+      display: none;
+    }
+    input#a + label{
+      display: inline-block;
+      width: 270px;
+      height: 157px;
+      box-sizing: border-box;
+      border: 5px solid #cbcbcb;
+      border-radius: 124px;
+      transition: .3s;
+      position: relative;
+    }
+    input#a:checked + label{
+      border-color: #30f349;
+      box-shadow: 0 0 0 80px #30f349 inset;
+    }
+    input#a + label::before{
+      content: '';
+      width: 133px;
+      height: 133px;
+      display: inline-block;
+      background-color: #fff;
+      box-shadow: 0 0 15px gray;
+      border-radius: 124px;
+      position: absolute;
+      top: 7px;
+      left: 5px;
+    }
+    input#a:checked + label::before{
+      left: 125px;
+    }
+    div > input + label{
+      display: inline-block;
+      margin: 30px;
+      width: 40px;
+      height: 40px;
+      box-sizing: border-box;
+      border: 3px solid;
+      border-radius: 40px;
+      position: relative;
+    }
+    div > input:active + label{
+      box-shadow: 0 0 0 20px rgba(2, 193, 94, 0.5),0 0 0 20px rgba(2, 193, 94, 0.5) inset;
+      transition: .1s linear;
+    }
+    div > input:checked + label{
+      border-color: rgb(2, 193, 94);
+    }
+    div > input:checked + label::before{
+      content: '';
+      background-color: rgb(2, 193, 94);
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      border-radius: 18px;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+    span{
+      display: inline-block;
+      font-size: 24px;
+      margin: 30px 0 30px 0;
+      position: absolute;
+    }
+    div > div{
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="a">
+  <label for="a"></label>
+  <div>
+    <div>
+      <input type="radio" id="b" name="a">
+      <label for="b"></label>
+      <span>Radio Button</span>
+    </div>
+  
+    <input type="radio" id="c" name="a">
+    <label for="c"></label>
+    <span>Radio Button</span>
+    <br>
+    <input type="radio" id="d" name="a">
+    <label for="d"></label>
+    <span>Radio Button</span>
+  </div>
+  
+</body>
+</html> 
