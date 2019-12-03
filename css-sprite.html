@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Sprites</title>
+    <style>
+      .title {
+        width: 180px;
+        height: 75px;
+        border: 1px solid black;
+        margin-top: 10px;
+        background: url(https://www.google.com/images/nav_logo242_hr.webp) 0 100% no-repeat;
+      }
+
+      .star {
+        width: 130px;
+        height: 30px;
+        border: 1px solid black;
+        margin-top: 10px;
+        background: url(https://www.google.com/images/nav_logo242_hr.webp) top -520px right -5px no-repeat;
+        transition: background 0.2s;
+      }
+
+      .person-info {
+        width: 30px;
+        height: 35px;
+        border: 1px solid black;
+        margin-top: 10px;
+        background: url(https://www.google.com/images/nav_logo242_hr.webp) top -655px left 0px no-repeat;
+        transition: background 0.1s;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="title"></div>
+      <div class="star"></div>
+      <div class="person-info"></div>
+  </body>
+</html>
