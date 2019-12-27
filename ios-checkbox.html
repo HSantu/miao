@@ -49,22 +49,30 @@
       position: relative;
     }
     div > input:active + label{
-      box-shadow: 0 0 0 20px rgba(2, 193, 94, 0.5),0 0 0 20px rgba(2, 193, 94, 0.5) inset;
-      transition: .1s linear;
+      box-shadow: 0 0 0 20px rgba(2, 193, 94, 0.5),0 0 0 20px rgba(2, 193, 94, 0.3) inset;
+      transition: .3s;
     }
     div > input:checked + label{
       border-color: rgb(2, 193, 94);
     }
-    div > input:checked + label::before{
+    div > input + label::before{
       content: '';
       background-color: rgb(2, 193, 94);
-      width: 18px;
-      height: 18px;
+      width: 0px;
+      height: 0px;
       display: inline-block;
       border-radius: 18px;
       position: absolute;
-      top: 8px;
-      left: 8px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transition: .3s;
+    }
+    div > input:checked + label::before{
+      width: 18px;
+      height: 18px;
     }
     span{
       display: inline-block;
